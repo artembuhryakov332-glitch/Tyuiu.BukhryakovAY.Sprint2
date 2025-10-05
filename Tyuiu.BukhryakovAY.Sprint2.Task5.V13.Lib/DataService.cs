@@ -5,17 +5,17 @@ namespace Tyuiu.BukhryakovAY.Sprint2.Task5.V13.Lib
     {
         public string FindDateOfNextDay(int n, int m, int g)
         {
-            if (n >= 1 && n < 30 && m >= 1 && m <= 12)
+            if (g >= 1 && g < 30 && m >= 1 && m <= 12)
             {
-                n++;
-                string[] date = [n.ToString("00"), m.ToString("00"), g.ToString()];
+                g++;
+                string[] date = [g.ToString("00"), m.ToString("00"), n.ToString()];
                 return string.Join(".", date);
             }
-            else if(n == 30 || n == 31)
+            else if(g == 30 || g == 31)
             {
-                n = 1;
+                g = 1;
                 m++;
-                string[] date = [n.ToString("00"), m.ToString("00"), g.ToString()];
+                string[] date = [g.ToString("00"), m.ToString("00"), n.ToString()];
                 return string.Join(".", date);
             }
             else

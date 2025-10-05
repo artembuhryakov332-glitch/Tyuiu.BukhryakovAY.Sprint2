@@ -7,11 +7,11 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
         Console.WriteLine("***************************************************************************");
-        Console.WriteLine("Введите день: ");
+        Console.WriteLine("Введите год: ");
         int n = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Введите месяц: ");
         int m = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Введите год: ");
+        Console.WriteLine("Введите день: ");
         int g = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
