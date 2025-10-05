@@ -3,23 +3,26 @@ namespace Tyuiu.BukhryakovAY.Sprint2.Task5.V13.Lib
 {
     public class DataService : ISprint2Task5V13
     {
-        public string FindDateOfNextDay(int g, int m, int n)
+        public string FindDateOfNextDay(int n, int m, int g)
         {
-            int[] res = [g, m, n];
-            switch (res)
+            if (n >= 1 && n < 30 && m >= 1 && m <= 12)
             {
-                case [>= 1,>=1 and <= 12,>= 1 and < 30]:
-                    int[] date = [g, m, n + 1];
-                    string stringDate = String.Join(" ", date);
-                    return(stringDate);
-
-                case[>= 1, >= 1 and <= 12, 30 or 31]:
-                    int[] difDate = [g, m + 1, n = 1];
-                    string stringDifDate = String.Join(" ", difDate);
-                    return(stringDifDate);
-                default:
-                    return "неверно заданы параметры";
+                n++;
+                string[] date = [n.ToString("00"), m.ToString("00"), g.ToString()];
+                return string.Join(".", date);
             }
+            else if(n == 30 || n == 31)
+            {
+                n = 1;
+                m++;
+                string[] date = [n.ToString("00"), m.ToString("00"), g.ToString()];
+                return string.Join(".", date);
+            }
+            else
+            {
+                return "ошибка ввода";
+            }
+            
         }
     }
 }

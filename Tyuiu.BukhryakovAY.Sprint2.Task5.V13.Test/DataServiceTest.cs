@@ -11,7 +11,7 @@ namespace Tyuiu.BukhryakovAY.Sprint2.Task5.V13.Test
             int g = 2007;
             int m = 11;
             int n = 30;
-            string wait = "2007 12 1";
+            string wait = "30.11.2007";
             string res = ds.FindDateOfNextDay(g, m, n);
             Assert.AreEqual(res, wait);
         }
