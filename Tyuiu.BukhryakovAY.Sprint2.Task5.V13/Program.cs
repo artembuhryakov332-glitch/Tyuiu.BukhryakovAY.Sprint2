@@ -16,7 +16,7 @@ internal class Program
         Console.WriteLine("***************************************************************************");
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
-        string res = ds.FindDateOfNextDay(n, m, g);
+        string res = ds.FindDateOfNextDay(g, m, n);
         Console.WriteLine("Следующий день: " + res);
     }
 }
