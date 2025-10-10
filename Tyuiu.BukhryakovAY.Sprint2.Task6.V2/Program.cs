@@ -13,7 +13,7 @@ internal class Program
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
         Console.WriteLine("***************************************************************************");
         string res = dataService.FindMonthSeason(value);
-        Console.WriteLine(res.ToLower());
+        Console.WriteLine(res);
 
     }
 }
